@@ -1,0 +1,20 @@
+<p>usuarios works!</p>
+
+<p>El usuario actual es {{ usuarioActual }}</p>
+
+<!-- formas de iterar propiedades; if - for - switch -->
+<p>Hay {{ usuarios.length }} usuarios</p>
+
+<!-- if -->
+@if (usuarios.length >= 3) {
+<p>Hay mas de 2 usuarios</p>
+} @else {
+<p>Hay pocos usuarios</p>
+}
+
+<!-- for -->
+@for (usr of usuarios; track usr.nombre; let i = $index) {
+<div>
+  <p>{{ i + 1 }} - {{ usr.perfil }} {{ usr.nombre }}</p>
+</div>
+}
