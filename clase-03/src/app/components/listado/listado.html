@@ -1,0 +1,22 @@
+<table>
+  <thead>
+    <tr>
+      <th>Legajo</th>
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- track mantiene un seguimiento de lo que se esta iterando para no perder la referencia de los elementos ante algun cambio siempre trackear por un valor unico en este caso el legajo -->
+    <!-- se llama con () porque es un iput signal -->
+    @for(al of listadoHijo(); track $index) {
+    <tr>
+      <td>{{ al.legajo }}</td>
+      <td>{{ al.nombre }}</td>
+      <td>{{ al.apellido }}</td>
+      <td><button class="btn btn-info" (click)="verDetalle(al)">Ver detalle</button></td>
+    </tr>
+    }
+  </tbody>
+</table>
