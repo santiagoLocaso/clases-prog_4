@@ -1,0 +1,11 @@
+@if(card(); as c){
+<!-- obtiene el valor y lo almacena en la variable c -->
+<div class="card">
+  <img [src]="c.imagen" alt="" />
+  <h1>{{ c.titulo }}</h1>
+  <p>{{ c.descripcion }}</p>
+
+  <br />
+  <a [routerLink]="c.url">{{ c.textoUrl }}</a>
+</div>
+}
