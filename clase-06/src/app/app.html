@@ -1,0 +1,11 @@
+@for (auto of autos(); track $index) {
+
+<p>
+  {{ auto.id }} - {{ auto.marca }} - {{ auto.precio }} - {{ auto.modelo }} - {{ auto.en_venta }} -
+  {{ auto.created_at }}
+</p>
+}
+
+<p>{{ error() }}</p>
+
+<router-outlet />
